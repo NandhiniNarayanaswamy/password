@@ -80,7 +80,7 @@ router.post("/password-reset", async (req, res) => {
         await user.save();
 
         // create a password reset link using the generated token
-        const resetLink = `http://localhost:3000/reset-password/${token}`
+        const resetLink = `https://clinquant-lokum-45b389.netlify.app/reset-password/${token}`
 
         // send the reset link to the user's mail (to, subject, text)
         await sendMail(user.email, "Password Reset", `Reset your password: ${resetLink}`)
