@@ -49,10 +49,6 @@ router.post('/register', async (req, res) => {
 
 
 
-
-
-
-
 //route for initiating the password reset, send the mail to your mailbox with the link to reset the password
 
 router.post("/password-reset", async (req, res) => {
@@ -80,7 +76,7 @@ router.post("/password-reset", async (req, res) => {
         await user.save();
 
         // create a password reset link using the generated token
-        const resetLink = `https://clinquant-lokum-45b389.netlify.app/reset-password/${token}`
+        const resetLink = `https://comfy-tanuki-afb8e0.netlify.app/reset-password/${token}`
 
         // send the reset link to the user's mail (to, subject, text)
         await sendMail(user.email, "Password Reset", `Reset your password: ${resetLink}`)
