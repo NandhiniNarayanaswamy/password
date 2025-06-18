@@ -93,15 +93,22 @@ const RegisterForm = () => {
 
                 {/* ✅ Forgot Password Button */}
                 {/* ✅ Link fixed here */}
+                {/* ✅ Forgot Password Button */}
                 <div className="text-center mt-3">
                     <Link to="/password-reset" className="btn btn-link text-decoration-none">
                         Forgot Password?
                     </Link>
                 </div>
 
-                <p className="text-muted small mt-3 text-center">
-                    Already have an account? Go to the login page to sign in.
-                </p>
+                <div className="text-center mt-2">
+                    <p className="text-muted small">
+                        Already have an account?{" "}
+                        <Link to="/login" className="text-primary fw-semibold text-decoration-none">
+                            Go to login page
+                        </Link>
+                    </p>
+                </div>
+
             </form>
         </div>
     );
