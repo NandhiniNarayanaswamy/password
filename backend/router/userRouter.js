@@ -76,7 +76,7 @@ router.post("/password-reset", async (req, res) => {
         await user.save();
 
         // create a password reset link using the generated token
-        const resetLink = `https://comfy-tanuki-afb8e0.netlify.app/reset-password/${token}`
+        const resetLink = `https://password-platform-frontend.netlify.app/reset-password/${token}`
 
         // send the reset link to the user's mail (to, subject, text)
         await sendMail(user.email, "Password Reset", `Reset your password: ${resetLink}`)
