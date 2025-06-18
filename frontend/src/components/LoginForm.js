@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../../styles/LoginForm.css'; // Make sure this file exists
+import '../styles/LoginForm.css'; // Make sure this file exists
 
 const LoginForm = () => {
     const [email, setEmail] = useState('');
@@ -30,8 +30,11 @@ const LoginForm = () => {
             if (res.ok) {
                 localStorage.setItem('token', data.token);
                 setMessage("Login successful!");
-                // Navigate to dashboard or home
-                navigate('/dashboard');
+
+                // Delay navigation to allow user to read the message
+                setTimeout(() => {
+                    navigate('/dashboard');
+                }, 1500); // 1.5 seconds delay
             } else {
                 setError(data.error || "Invalid email or password");
             }
