@@ -91,8 +91,15 @@ const RegisterForm = () => {
 
                 <button type="submit" className="mb-3 mt-3 btn btn-success">Register</button>
 
-                <p className="text-muted small mt-3">
-                    Already have an account? Go to the login page to sign in. If you forget your password, click "Forgot Password?" on the login screen to reset it.
+                {/* ✅ Forgot Password Button */}
+                <div className="text-center mt-3">
+                    <a href="/reset-password" className="btn btn-link text-decoration-none">
+                        Forgot Password?
+                    </a>
+                </div>
+
+                <p className="text-muted small mt-3 text-center">
+                    Already have an account? Go to the login page to sign in.
                 </p>
             </form>
         </div>
