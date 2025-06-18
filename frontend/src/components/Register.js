@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 const RegisterForm = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
@@ -92,10 +92,11 @@ const RegisterForm = () => {
                 <button type="submit" className="mb-3 mt-3 btn btn-success">Register</button>
 
                 {/* ✅ Forgot Password Button */}
+                {/* ✅ Link fixed here */}
                 <div className="text-center mt-3">
-                    <a href="/password-reset" className="btn btn-link text-decoration-none">
+                    <Link to="/password-reset" className="btn btn-link text-decoration-none">
                         Forgot Password?
-                    </a>
+                    </Link>
                 </div>
 
                 <p className="text-muted small mt-3 text-center">
