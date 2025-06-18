@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import RegisterForm from "./components/Register";
 import PasswordReset from "./components/PasswordReset";
 import ResetPasswordForm from "./components/ResetPasswordForm";
+import LoginForm from "./components/LoginForm";
 import "./App.css"
 
 
